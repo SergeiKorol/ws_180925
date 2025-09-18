@@ -1,7 +1,12 @@
 import requests
 
 def test_task_Sonya():
-
+    """
+    Создает задачу.
+    Удаляет по id.
+    Проверка удаления.
+    :return:
+    """
     body = {"title": "task_Sonya", "completed": False}
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
     id = response.json()["id"]
