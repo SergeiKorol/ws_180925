@@ -2,6 +2,9 @@ import requests
 
 
 def test_to_do():
+    """
+    Тест создает задачу, изменяет название, проверяет, что id не изменился.
+    """
     body = {"title": "Создать задачу", "completed": False}
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
     to_id = response.json()["id"]
