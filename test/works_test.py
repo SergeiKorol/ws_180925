@@ -1,8 +1,9 @@
 import requests
+"""изменено название"""
 
-def test_add():
+def work_add():
 
-    body = {"title": "test", "completed": True}
+    body = {"title": "work", "completed": True}
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
 
     assert response.status_code == 400
